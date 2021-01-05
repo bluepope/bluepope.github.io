@@ -1,1 +1,1 @@
-# bluepope.github.io
+Blazor Web Assembly Å×½ºÆ®
