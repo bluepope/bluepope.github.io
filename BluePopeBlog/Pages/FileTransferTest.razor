@@ -1,0 +1,79 @@
+﻿@page "/FileTransferTest"
+@using System.IO
+@inject HttpClient client
+
+<h1>파일 업로드 확인</h1>
+
+<div class="card">
+    <div class="card-header">Upload</div>
+    <div class="card-body">
+        <div>
+            <InputFile OnChange="FileOnChange" accept="@string.Join(',', d.Keys)" />
+        </div>
+        @if (FileList?.Count > 0)
+        {
+            foreach (var file in FileList)
+            {
+                <div>
+                    @file.Name (@file.Size.ToString("#,0,")kb)
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-primary" @onclick="FileUpload">Upload Test</button>
+                </div>
+
+                if (ImgUrl != null)
+                {
+                    <div>
+                        <img src="@ImgUrl" />
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">Download</div>
+    <div class="card-body">
+        <div><button class="btn btn-sm btn-primary" @onclick="FileDownload">Download Test</button></div>
+    </div>
+</div>
+@code {
+    IReadOnlyList<IBrowserFile> FileList { get; set; }
+    string ImgUrl { get; set; }
+    Dictionary<string, string> d = new Dictionary<string, string>();
+
+    protected override void OnInitialized()
+    {
+        d.Add(".jpg", "image/jpg");
+        d.Add(".png", "image/png");
+        d.Add(".gif", "image/gif");
+    }
+
+    private void FileOnChange(InputFileChangeEventArgs e)
+    {
+        FileList = e.GetMultipleFiles();
+    }
+
+    async Task FileUpload()
+    {
+        foreach (var file in FileList)
+        {
+            byte[] byteArr = await file.OpenReadStream().ToByteArray();
+
+            string ext = Path.GetExtension(file.Name).ToLower();
+
+            if (d.Keys.Contains(ext))
+            {
+                ImgUrl = $"data:{d[ext]};base64,{Convert.ToBase64String(byteArr)}";
+            }
+        }
+
+        //WebApi 를 통한 업로드 작업은 여기서
+    }
+
+    void FileDownload()
+    {
+        //JSRuntime 을 이용해서 Javascript 로 다운로드 처리해야함
+    }
+}
