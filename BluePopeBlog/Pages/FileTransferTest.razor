@@ -8,7 +8,7 @@
     <div class="card-header">Upload</div>
     <div class="card-body">
         <div>
-            <InputFile OnChange="FileOnChange" accept="@string.Join(',', d.Keys)" />
+            <InputFile OnChange="FileOnChange" accept="image/*" />
         </div>
         @if (FileList?.Count > 0)
         {
@@ -41,15 +41,7 @@
 @code {
     IReadOnlyList<IBrowserFile> FileList { get; set; }
     string ImgUrl { get; set; }
-    Dictionary<string, string> d = new Dictionary<string, string>();
-
-    protected override void OnInitialized()
-    {
-        d.Add(".jpg", "image/jpg");
-        d.Add(".png", "image/png");
-        d.Add(".gif", "image/gif");
-    }
-
+    
     private void FileOnChange(InputFileChangeEventArgs e)
     {
         FileList = e.GetMultipleFiles();
@@ -61,11 +53,11 @@
         {
             byte[] byteArr = await file.OpenReadStream().ToByteArray();
 
-            string ext = Path.GetExtension(file.Name).ToLower();
+            string mimeType = MimeMapping.MimeUtility.GetMimeMapping(file.Name);
 
-            if (d.Keys.Contains(ext))
+            if (mimeType.IndexOf("image/") == 0)
             {
-                ImgUrl = $"data:{d[ext]};base64,{Convert.ToBase64String(byteArr)}";
+                ImgUrl = $"data:{mimeType};base64,{Convert.ToBase64String(byteArr)}";
             }
         }
 
