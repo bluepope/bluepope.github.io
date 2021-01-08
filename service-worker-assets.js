@@ -105,7 +105,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
-      "hash": "sha256-1gOWiyx9Kcyz7hNzGkxIM2SaRD2631HjSUhDtVrkU6s=",
+      "hash": "sha256-FhRpEFnqGYGoragupmd1vo+LMFl52WBWWWvggDytlEc=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-bD0t2jL1zGdK8EMIEYMowfXhDvABfiaGmtVHbt6O5BE=",
+      "hash": "sha256-QKW8ySjNmrvMBzB0t3jbLuW8F33YRCM49iV0TkrSlho=",
       "url": "_framework\/BluePopeBlog.dll"
     },
     {
@@ -185,7 +185,7 @@
       "url": "_framework\/System.Console.dll"
     },
     {
-      "hash": "sha256-XsG8ajCF\/HpvhwZ2HtQ+XvhBH9WGE0r8TBb7sTdAZpI=",
+      "hash": "sha256-S3sJibQY\/EsJO9VbQlOs9XdGEjbxKo2Vj9XuT6OGmJc=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -233,11 +233,11 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-tuYxRA4k\/GZAWRBC2R5EerE591LeiQGRw51pblnr8CI=",
+      "hash": "sha256-Z4LvgzzKr4mSEE5qtzjyUc3LMlZYskZykBPo08gd4AQ=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-R7jGtx0vzDfZfDDCDolb1RSLQHaxAtrjyD3OfUDNluc=",
+      "hash": "sha256-Ro7HcxcW6xEAIT2HVk+haQ6nE54XvZcGBI6R6n8mrow=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -245,5 +245,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "Yh7JK7d\/"
+  "version": "Key7z\/hY"
 };
