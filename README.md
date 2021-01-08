@@ -1,1 +1,1 @@
-Blazor Web Assembly �׽�Ʈ
+Blazor Web Assembly 테스트
