@@ -57,7 +57,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-RIN59519shwjFpoBMk3fzpUurQP\/fgMln8HY3yOPSaI=",
+      "hash": "sha256-Xp2phIfXkYSpU4j3cQwAtlA8WtOfczpJTUctvjZhNjc=",
       "url": "index.html"
     },
     {
@@ -169,7 +169,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-HsIOj+1XaU20AmLPjgn\/C9KWbHvbpZayxpH8xpI+7Rc=",
+      "hash": "sha256-p9o\/ZfwmEwYVDSsDyNGlKJYyA8QySTx7gpMDM4zO0Ic=",
       "url": "_framework\/BluePopeBlog.dll"
     },
     {
@@ -245,7 +245,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-1qPVE5duj4hmBxNv+vqj9RfyZ0VUfCg8EbX7kHLrDLg=",
+      "hash": "sha256-jRKsJzhwbqg\/4KQMbpMLB\/9v7usNE3eEyIeNoWtjddk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -253,5 +253,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "AWcFMzAL"
+  "version": "zjyckdGr"
 };
