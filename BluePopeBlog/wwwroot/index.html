@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,6 +11,25 @@
     <link href="BluePopeBlog.styles.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+
+    <script src="lib/FileSaver.js/FileSaver.js"></script>
+    <script>
+        window.FileSave = function (x, fileName, mimeType) {
+            var byteCharacters = atob(x);
+
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+
+            //console.log(byteArray);
+            //console.log(mimeType);
+            //console.log(fileName);
+
+            saveAs(new Blob([byteArray]), fileName, { type: mimeType });
+        }
+    </script>
 </head>
 
 <body>

@@ -1,6 +1,7 @@
 ﻿@page "/FileTransferTest"
 @using System.IO
 @inject HttpClient client
+@inject IJSRuntime jsRuntime
 
 <h1>파일 업로드 확인</h1>
 
@@ -36,11 +37,13 @@
     <div class="card-header">Download</div>
     <div class="card-body">
         <div><button class="btn btn-sm btn-primary" @onclick="FileDownload">Download Test</button></div>
+        <div>@DownloadString</div>
     </div>
 </div>
 @code {
     IReadOnlyList<IBrowserFile> FileList { get; set; }
     string ImgUrl { get; set; }
+    string DownloadString { get; set;} 
     
     private void FileOnChange(InputFileChangeEventArgs e)
     {
@@ -67,5 +70,17 @@
     void FileDownload()
     {
         //JSRuntime 을 이용해서 Javascript 로 다운로드 처리해야함
+
+        var bytes = System.Text.Encoding.UTF8.GetBytes("test 테스트 test");
+
+        //요걸 어떻게 공통모듈화 한다.....??
+
+        string file_name = "test.txt";
+        string mime_type = "application/octet-stream";
+        
+        //bytes 는 base64 로 자동으로 변환되네
+        jsRuntime.InvokeAsync<string>("FileSave", bytes, file_name, mime_type);
+
+        DownloadString = Convert.ToHexString(bytes);
     }
 }
