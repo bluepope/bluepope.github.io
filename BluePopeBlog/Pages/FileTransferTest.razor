@@ -43,7 +43,8 @@
 @code {
     IReadOnlyList<IBrowserFile> FileList { get; set; }
     string ImgUrl { get; set; }
-    string DownloadString { get; set;} 
+    string DownloadString { get; set;}
+ 
     
     private void FileOnChange(InputFileChangeEventArgs e)
     {
@@ -75,7 +76,7 @@
 
         //요걸 어떻게 공통모듈화 한다.....??
 
-        string file_name = "test.txt";
+        string file_name = "test2.txt";
         string mime_type = "application/octet-stream";
         
         //bytes 는 base64 로 자동으로 변환되네
