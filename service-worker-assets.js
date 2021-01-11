@@ -57,8 +57,12 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-D0cAYPN6v7xRK6eVZB84K\/KV4zkzXLmcvqX5VorofjY=",
+      "hash": "sha256-iFnZgoATYu8wlauCMk+Y6k0K4bIDMFICiPqd0rZlhp4=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-XTDDKsHghBomlQlNrAGrjrX0Z2EygxvuSQN9jOws74E=",
+      "url": "lib\/FileSaver.js\/FileSaver.js"
     },
     {
       "hash": "sha256-JyUzT7dLRDN\/APQ6UP+HqstlVNjq6pkUzWCrb6p0vR0=",
@@ -165,7 +169,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-E7gMI5jTiiPZDLOqR+jtChtG5RWKJQxdMwc22QLheOk=",
+      "hash": "sha256-ENhce891gAdHtLWVpvIgJK9qw0fJK5Ugcnjn8G+9VoU=",
       "url": "_framework\/BluePopeBlog.dll"
     },
     {
@@ -237,11 +241,11 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-WDhdl9amRFXoMS8xqdKfzUdNTSR3WKBKMhg\/HsWQmPg=",
+      "hash": "sha256-uxpl7n2df++fkWAswSk1aEwIHGteKpqtMfJ6RV3TvVI=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-rb0mC8zLaGVLTS\/M7SPz8LnnqxQjCO7Gn\/BYltaGwmY=",
+      "hash": "sha256-ZtcMB4LVpSvloLzDMlAMgDwdQ3MqVhei\/aRSTA9nIn8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -249,5 +253,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "BYkCQSMn"
+  "version": "CO0XHHF7"
 };
