@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "predeploy": "yarn build",
+  "deploy": "gh-pages -d build",
+  "homepage": "https://bluepope.github.io"
 }
